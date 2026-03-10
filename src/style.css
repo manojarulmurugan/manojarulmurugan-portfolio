@@ -164,6 +164,14 @@ button:focus {
   width: 2.5em !important;
 }
 
+.logo-initials {
+  font-size: 1.6em;
+  font-weight: 900;
+  font-family: "Segoe UI", "Poppins", "Inter", system-ui, sans-serif;
+  color: var(--imp-text-color);
+  letter-spacing: 0.05em;
+}
+
 .navbar-nav .nav-link {
   color: white !important;
   padding-right: 1rem !important;
@@ -573,8 +581,51 @@ button:focus {
   width: fit-content !important;
   cursor: pointer !important;
   transition: outline-color 0.3s, outline-width 0.3s, transform 0.3s;
-  color: white;
 }
+.tech-icons svg,
+.tech-icons svg path {
+  fill: currentColor;
+}
+/* Skills – brand colors (SVG icons use color; img icons use filter to tint) */
+.tech-icon-python svg, .tech-icon-python svg path { color: #3776AB; fill: #3776AB; }
+.tech-icon-python img { filter: none; }
+.tech-icon-sql svg, .tech-icon-sql svg path { color: #4479A1; fill: #4479A1; }
+.tech-icon-sql img { filter: none; }
+.tech-icon-r svg, .tech-icon-r svg path { color: #276DC3; fill: #276DC3; }
+.tech-icon-pytorch svg, .tech-icon-pytorch svg path { color: #EE4C2C; fill: #EE4C2C; }
+.tech-icon-tensorflow svg, .tech-icon-tensorflow svg path { color: #FF6F00; fill: #FF6F00; }
+.tech-icon-scikitlearn svg, .tech-icon-scikitlearn svg path { color: #F7931E; fill: #F7931E; }
+.tech-icon-xgboost svg, .tech-icon-xgboost svg path { color: #337AB7; fill: #337AB7; }
+.tech-icon-huggingface svg, .tech-icon-huggingface svg path { color: #FFD21E; fill: #FFD21E; }
+.tech-icon-huggingface img { filter: none; height: 1.6rem; width: auto; }
+.tech-icon-langchain svg, .tech-icon-langchain svg path { color: #2d5a7b; fill: #2d5a7b; }
+.tech-icon-langchain img { filter: none; height: 1.6rem; width: auto; }
+.tech-icon-snowflake svg, .tech-icon-snowflake svg path { color: #29B5E8; fill: #29B5E8; }
+.tech-icon-gcp svg, .tech-icon-gcp svg path { color: #4285F4; fill: #4285F4; }
+.tech-icon-bigquery svg, .tech-icon-bigquery svg path { color: #4285F4; fill: #4285F4; }
+.tech-icon-mlflow svg, .tech-icon-mlflow svg path { color: #0194E2; fill: #0194E2; }
+.tech-icon-docker svg, .tech-icon-docker svg path { color: #2496ED; fill: #2496ED; }
+.tech-icon-docker img { filter: none; }
+.tech-icon-powerbi svg, .tech-icon-powerbi svg path { color: #F2C811; fill: #F2C811; }
+.tech-icon-git svg, .tech-icon-git svg path { color: #F05032; fill: #F05032; }
+.tech-icon-git img { filter: none; }
+.tech-icon-spark svg, .tech-icon-spark svg path { color: #E25A1C; fill: #E25A1C; }
+.tech-icon-vertex svg, .tech-icon-vertex svg path { color: #4285F4; fill: #4285F4; }
+/* Tools – brand colors */
+.tech-icon-vscode img { filter: none; }
+.tech-icon-jupyter svg, .tech-icon-jupyter svg path { color: #F37726; fill: #F37726; }
+.tech-icon-github svg, .tech-icon-github svg path { color: #e8e8e8; fill: #e8e8e8; }
+.tech-icon-gcs svg, .tech-icon-gcs svg path { color: #4285F4; fill: #4285F4; }
+.tech-icon-bigquery-tools svg, .tech-icon-bigquery-tools svg path { color: #4285F4; fill: #4285F4; }
+.tech-icon-dataproc svg, .tech-icon-dataproc svg path { color: #4285F4; fill: #4285F4; }
+.tech-icon-mlflow-tools svg, .tech-icon-mlflow-tools svg path { color: #0194E2; fill: #0194E2; }
+.tech-icon-vertex-tools svg, .tech-icon-vertex-tools svg path { color: #4285F4; fill: #4285F4; }
+.tech-icon-docker-tools svg, .tech-icon-docker-tools svg path { color: #2496ED; fill: #2496ED; }
+.tech-icon-docker-tools img { filter: none; }
+.tech-icon-claude img { filter: none; }
+.tech-icon-chatgpt svg, .tech-icon-chatgpt svg path { color: #412991; fill: #412991; }
+.tech-icon-cursor img { filter: none; }
+.tech-icon-copilot svg, .tech-icon-copilot svg path { color: #e8e8e8; fill: #e8e8e8; }
 
 .tech-icons-text {
   display: flex;

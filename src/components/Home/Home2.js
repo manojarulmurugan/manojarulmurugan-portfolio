@@ -13,37 +13,39 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              I’m an MS Data Science student at UW-Madison (graduating May 2026)
+              with a focus on forecasting and production ML. I’ve built systems
+              that ship: a Feature Store on Snowflake at Calix, forecasting
+              ensembles that improved accuracy by ~50%, and operational analytics
+              that drove $250k in cost savings at Shell India.
               <br />
               <br />
               I’m proficient in
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  Python, SQL, PyTorch, scikit-learn, and XGBoost{" "}
                 </b>
               </i>
-              — and I enjoy working across both backend and frontend stacks.
+              — and I work across time-series, deep learning, and LLM/agentic AI.
               <br />
               <br />
-              My key areas of interest include developing
+              My key areas of interest include
               <i>
                 <b className="purple">
                   {" "}
-                  Web Applications, Blockchain Solutions,{" "}
+                  time-series forecasting, NLP & RAG,{" "}
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              and building ML systems that run in production, not just in
+              notebooks.
               <br />
               <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
+              I'm actively looking for full-time roles as a{" "}
+              <b className="purple">Data Scientist</b>,{" "}
               <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
+                <b className="purple">ML Engineer</b>, or{" "}
+                <b className="purple">Applied AI Engineer</b>.
               </i>
             </p>
           </Col>
