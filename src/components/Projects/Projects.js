@@ -43,12 +43,11 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={squadplanner}
+              imgPath={recosys}
               isBlog={false}
-              title="SquadPlanner"
-              description="AI trip planning agent with LangChain and Gemini AI. Six custom tools over millions of Yelp records; flight and hotel API integration and budget fairness for groups of 2–10 travelers."
-              ghLink="https://github.com/manojarulmurugan/AI-Squad-Planner"
-              demoLink="https://ai-squad-planner-fzk9tarzmendo6eg9fynwj.streamlit.app/"
+              title="E-Commerce Recommendation System"
+              description="Engineered an end-to-end recommendation engine by processing 411M+ events (70GB) using BigQuery and Apache Spark on GCP. Developed collaborative filtering and sequential models, deploying a full MLOps pipeline via MLflow, FastAPI on Cloud Run, and automated retraining."
+              ghLink="https://github.com/manojarulmurugan/RecoSys"
             />
           </Col>
 
@@ -74,11 +73,12 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={recosys}
+              imgPath={squadplanner}
               isBlog={false}
-              title="E-Commerce Recommendation System"
-              description="Engineered an end-to-end recommendation engine by processing 411M+ events (70GB) using BigQuery and Apache Spark on GCP. Developed collaborative filtering and sequential models, deploying a full MLOps pipeline via MLflow, FastAPI on Cloud Run, and automated retraining."
-              ghLink="https://github.com/manojarulmurugan/RecoSys"
+              title="SquadPlanner"
+              description="AI trip planning agent with LangChain and Gemini AI. Six custom tools over millions of Yelp records; flight and hotel API integration and budget fairness for groups of 2–10 travelers."
+              ghLink="https://github.com/manojarulmurugan/AI-Squad-Planner"
+              demoLink="https://ai-squad-planner-fzk9tarzmendo6eg9fynwj.streamlit.app/"
             />
           </Col>
         </Row>
