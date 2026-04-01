@@ -8,6 +8,7 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineClockCircle,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 
@@ -34,7 +35,21 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex align-items-center">
-          <span className="logo-initials">mA</span>
+          <span
+            style={{
+              fontFamily:
+                'ui-monospace, SFMono-Regular, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace',
+              fontSize: "1.85rem",
+              fontWeight: 800,
+              letterSpacing: "-0.03em",
+              lineHeight: 1,
+              userSelect: "none",
+            }}
+          >
+            <span style={{ color: "rgba(245, 158, 11, 0.4)" }}>{"<"}</span>
+            <span style={{ color: "#f59e0b" }}>mA</span>
+            <span style={{ color: "rgba(245, 158, 11, 0.4)" }}>{"/>"}</span>
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -61,6 +76,17 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/timeline"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineClockCircle style={{ marginBottom: "2px" }} />{" "}
+                Timeline
               </Nav.Link>
             </Nav.Item>
 
