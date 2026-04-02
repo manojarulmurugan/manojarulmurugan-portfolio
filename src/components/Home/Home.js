@@ -4,7 +4,7 @@ import Particle from "../Particle";
 import Terminal from "./Terminal";
 import Home2 from "./Home2";
 import Type from "./Type";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
@@ -66,6 +66,14 @@ function Home() {
                   className="icon-colour  home-social-icons"
                 >
                   <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="mailto:manojarulmurugan@gmail.com"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiOutlineMail />
                 </a>
               </li>
               <li className="social-icons">

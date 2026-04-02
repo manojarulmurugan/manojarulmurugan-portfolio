@@ -7,10 +7,31 @@ function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <Container fluid className="footer">
+    <>
+      <style>{`
+        .footer .footer-email-link:hover,
+        .footer .footer-email-link:focus {
+          color: rgba(245, 158, 11, 0.7) !important;
+          text-decoration: none !important;
+        }
+      `}</style>
+      <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>Manoj Arulmurugan</h3>
+          <a
+            className="footer-email-link"
+            href="mailto:manojarulmurugan@gmail.com"
+            style={{
+              display: "block",
+              fontSize: "11px",
+              color: "rgba(245, 158, 11, 0.7)",
+              textDecoration: "none",
+              marginTop: "4px",
+            }}
+          >
+            manojarulmurugan@gmail.com
+          </a>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} MA</h3>
@@ -51,6 +72,7 @@ function Footer() {
         </Col>
       </Row>
     </Container>
+    </>
   );
 }
 

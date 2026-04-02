@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 
 function useInViewOnce(threshold) {
   const ref = useRef(null);
@@ -334,6 +335,53 @@ function WhoIAm() {
           <p style={styles.profileOpenTo}>
             Open to full-time roles in Data Science, ML Engineering and Applied AI
           </p>
+          <div
+            style={{
+              borderBottom: "0.5px solid rgba(255,255,255,0.08)",
+              margin: "10px 0",
+            }}
+            aria-hidden="true"
+          />
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              columnGap: "24px",
+              rowGap: "8px",
+            }}
+          >
+            <a
+              href="mailto:manojarulmurugan@gmail.com"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                fontSize: "12px",
+                color: "rgba(255,255,255,0.45)",
+                textDecoration: "none",
+              }}
+            >
+              <AiOutlineMail aria-hidden="true" />
+              manojarulmurugan@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/manojarulmurugan"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                fontSize: "12px",
+                color: "rgba(255,255,255,0.45)",
+                textDecoration: "none",
+              }}
+            >
+              <AiFillLinkedin aria-hidden="true" />
+              linkedin.com/in/manojarulmurugan
+            </a>
+          </div>
         </div>
 
         <section id="technical-identity">
