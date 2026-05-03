@@ -89,11 +89,11 @@ function Projects() {
               imgPath={squadplanner}
               isBlog={false}
               title="SquadPlanner"
-              description="AI trip planning agent with LangChain and Gemini AI. Six custom tools over millions of Yelp records; flight and hotel API integration and budget fairness for groups of 2–10 travelers."
-              ghLink="https://github.com/manojarulmurugan/AI-Squad-Planner"
-              demoLink="https://ai-squad-planner-fzk9tarzmendo6eg9fynwj.streamlit.app/"
+              description="Full-stack group trip planner powered by a LangGraph agent workflow. Scores US destinations, pauses for leader city approval, fetches live flights, hotels, activities, routes, and weather, then streams a constraint-aware day-by-day itinerary with budget and fairness checks."
+              ghLink="https://github.com/manojarulmurugan/AI-Squad-Planner-v2.0"
+              demoLink="https://ai-squad-planner-v2-0.vercel.app/"
               status="Live Demo"
-              tags={["LangChain", "Gemini AI", "Python", "Agentic AI"]}
+              tags={["LangGraph", "FastAPI", "React", "MongoDB", "Agentic AI"]}
             />
           </Col>
         </Row>
