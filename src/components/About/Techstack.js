@@ -3,7 +3,6 @@ import { Col, Row } from "react-bootstrap";
 import Python from "../../Assets/TechIcons/Python.svg";
 import SQL from "../../Assets/TechIcons/SQL.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
-import Docker from "../../Assets/TechIcons/Docker.svg";
 import HuggingFaceIcon from "../../Assets/TechIcons/huggingface.svg";
 import LangChainIcon from "../../Assets/TechIcons/langchain.svg";
 import {
@@ -11,12 +10,11 @@ import {
   SiTensorflow,
   SiScikitlearn,
   SiSnowflake,
-  SiGooglecloud,
-  SiGooglebigquery,
-  SiMlflow,
   SiPowerbi,
   SiApachespark,
   SiR,
+  SiFastapi,
+  SiDbt,
 } from "react-icons/si";
 
 function Techstack() {
@@ -58,25 +56,25 @@ function Techstack() {
         <img src={LangChainIcon} alt="LangChain" />
         <div className="tech-icons-text">LangChain</div>
       </Col>
+      <Col xs={4} md={2} className="tech-icons tech-icon-fastapi">
+        <SiFastapi fontSize={"24px"} />
+        <div className="tech-icons-text">FastAPI</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons tech-icon-pyspark">
+        <SiApachespark fontSize={"24px"} />
+        <div className="tech-icons-text">PySpark</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons tech-icon-dbt">
+        <SiDbt fontSize={"24px"} />
+        <div className="tech-icons-text">dbt</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons tech-icon-langgraph">
+        <img src={LangChainIcon} alt="LangGraph" />
+        <div className="tech-icons-text">LangGraph</div>
+      </Col>
       <Col xs={4} md={2} className="tech-icons tech-icon-snowflake">
         <SiSnowflake fontSize={"24px"} />
         <div className="tech-icons-text">Snowflake</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons tech-icon-gcp">
-        <SiGooglecloud fontSize={"24px"} />
-        <div className="tech-icons-text">GCP</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons tech-icon-bigquery">
-        <SiGooglebigquery fontSize={"24px"} />
-        <div className="tech-icons-text">BigQuery</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons tech-icon-mlflow">
-        <SiMlflow fontSize={"24px"} />
-        <div className="tech-icons-text">MLflow</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons tech-icon-docker">
-        <img src={Docker} alt="Docker" />
-        <div className="tech-icons-text">Docker</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons tech-icon-powerbi">
         <SiPowerbi fontSize={"24px"} />
@@ -89,10 +87,6 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons tech-icon-spark">
         <SiApachespark fontSize={"24px"} />
         <div className="tech-icons-text">Apache Spark</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons tech-icon-vertex">
-        <SiGooglecloud fontSize={"24px"} />
-        <div className="tech-icons-text">Vertex AI</div>
       </Col>
     </Row>
   );

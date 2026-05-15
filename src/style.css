@@ -853,6 +853,11 @@ button:focus {
 .tech-icon-huggingface img { filter: none; height: 1.6rem; width: auto; }
 .tech-icon-langchain svg, .tech-icon-langchain svg path { color: #2d5a7b; fill: #2d5a7b; }
 .tech-icon-langchain img { filter: none; height: 1.6rem; width: auto; }
+.tech-icon-fastapi svg, .tech-icon-fastapi svg path { color: #009688; fill: #009688; }
+.tech-icon-pyspark svg, .tech-icon-pyspark svg path { color: #E25A1C; fill: #E25A1C; }
+.tech-icon-dbt svg, .tech-icon-dbt svg path { color: #FF694A; fill: #FF694A; }
+.tech-icon-langgraph svg, .tech-icon-langgraph svg path { color: #2d5a7b; fill: #2d5a7b; }
+.tech-icon-langgraph img { filter: none; height: 1.6rem; width: auto; }
 .tech-icon-snowflake svg, .tech-icon-snowflake svg path { color: #29B5E8; fill: #29B5E8; }
 .tech-icon-gcp svg, .tech-icon-gcp svg path { color: #4285F4; fill: #4285F4; }
 .tech-icon-bigquery svg, .tech-icon-bigquery svg path { color: #4285F4; fill: #4285F4; }
@@ -1160,6 +1165,8 @@ button:focus {
   background: #1a1a1a;
   border: 1px solid rgba(245, 158, 11, 0.45);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  container-type: inline-size;
+  container-name: hero-terminal;
 }
 
 .hero-terminal-toolbar {
@@ -1191,22 +1198,32 @@ button:focus {
 }
 
 .hero-terminal-body {
-  padding: 1rem 1.35rem 1.2rem 1.15rem;
-  min-height: 220px;
+  padding: 0.65rem 0.55rem 0.8rem 0.5rem;
+  min-height: calc(9 * 1.52em + 8 * 0.14rem + 1.35rem);
   font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
     monospace;
-  font-size: clamp(0.68rem, 1.45vw, 0.82rem);
-  line-height: 1.65;
+  /* ~82 monospace chars across the longest line */
+  font-size: clamp(0.52rem, calc(100cqw / 47), 0.72rem);
+  line-height: 1.52;
   text-align: left;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245, 158, 11, 0.35) transparent;
   -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 768px) {
+  .hero-terminal-body {
+    padding: 0.6rem 0.5rem 0.75rem 0.45rem;
+    min-height: calc(9 * 1.52em + 8 * 0.14rem + 1.3rem);
+  }
 }
 
 .hero-terminal-line {
   white-space: nowrap;
   word-break: normal;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.14rem;
 }
 
 .hero-terminal-line:last-child {
@@ -1265,15 +1282,38 @@ button:focus {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.who-iam-main strong {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.who-iam-outside-lead {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.who-iam-outside-lead--tamil {
+  font-size: 1.1em;
+}
+
 .who-iam-pull-quote {
   border-left: 3px solid transparent;
   background: transparent;
   transition: border-color 0.8s ease, background 0.8s ease;
+  max-width: 100%;
+  width: 100%;
 }
 
 .who-iam-pull-quote.who-iam-pull-quote-visible {
   border-left-color: #f59e0b;
   background: rgba(245, 158, 11, 0.06);
+}
+
+.who-iam-pull-quote-text {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .who-iam-timeline-track {

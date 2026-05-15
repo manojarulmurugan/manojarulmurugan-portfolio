@@ -48,7 +48,7 @@ const ScrollBlock = React.forwardRef(function ScrollBlock(
 
 const ENTRIES = [
   {
-    year: "2019 — 2023",
+    year: "Jul 2019 — May 2023",
     title: "B.Tech Computer Science, VIT Chennai",
     summary:
       "Where it started. Math, stats, and a slow realization that data was the direction.",
@@ -57,7 +57,7 @@ const ENTRIES = [
     active: false,
   },
   {
-    year: "2022",
+    year: "Mar 2022 — Jun 2022",
     title: "iOS Development Intern, Radicosoft",
     summary:
       "Shipped a real app before ChatGPT. Then realized UI was not the direction.",
@@ -66,7 +66,7 @@ const ENTRIES = [
     active: false,
   },
   {
-    year: "2022 — 2023",
+    year: "Oct 2022 — Apr 2023",
     title: "First ML Project: Credit Risk Analysis",
     summary:
       "The project that made everything click. Found the right problem class.",
@@ -75,7 +75,7 @@ const ENTRIES = [
     active: false,
   },
   {
-    year: "2023",
+    year: "Jun 2023 — Dec 2023",
     title: "Diploma in Data Science, IIT Madras",
     summary:
       "Deliberate gap-filling. Built the foundation before going further.",
@@ -84,7 +84,7 @@ const ENTRIES = [
     active: false,
   },
   {
-    year: "2023 — 2024",
+    year: "Aug 2023 — Aug 2024",
     title: "Operations Data Analyst, Shell India",
     summary:
       "First industry data role. $250k impact. Shell Mobility Wall of Fame Award Q1 2024.",
@@ -93,16 +93,16 @@ const ENTRIES = [
     active: false,
   },
   {
-    year: "2024 — May 2026",
+    year: "Sep 2024 — May 2026",
     title: "MS Data Science, UW-Madison",
     summary:
-      "Current. Going deep on ML, AI, and everything in between at one of the best in the world.",
+      "Graduated May 2026. Went deep on ML, AI, and everything in between at one of the best in the world.",
     body:
-      "Came to Madison with a clear goal: go deeper into ML and AI in a field that actually excites me. Coursework has covered Statistical Methods, Machine Learning, Advanced Deep Learning, NLP, Optimization, and DBMS. The real work has been in the projects: Time-Aware RAG, Hallucination Steering on LLM hidden states, SquadPlanner, and a production-grade recommendation engine on GCP. The masters confirmed the direction. This is the domain I want to build in.",
-    active: true,
+      "Came to Madison with a clear goal: go deeper into ML and AI in a field that actually excites me. Coursework covered Statistical Methods, Machine Learning, Advanced Deep Learning, NLP, Optimization, and DBMS. The real work was in the projects: Time-Aware RAG, Hallucination Steering on LLM hidden states, SquadPlanner, and a production-grade recommendation engine on GCP. The masters confirmed the direction. This is the domain I want to build in.",
+    active: false,
   },
   {
-    year: "2025",
+    year: "Jun — Dec 2025",
     title: "ML Intern, Calix Inc.",
     summary:
       "50% forecast accuracy lift. Shipped to production. Most rigorous end-to-end ML work to date.",

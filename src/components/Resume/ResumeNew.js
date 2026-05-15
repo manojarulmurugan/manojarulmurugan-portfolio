@@ -111,7 +111,7 @@ function ResumeNew() {
             >
               Last updated{" "}
               <span style={{ color: "rgba(255, 255, 255, 0.92)", fontWeight: 600 }}>
-                March 2026
+                May 2026
               </span>
             </span>
           </div>

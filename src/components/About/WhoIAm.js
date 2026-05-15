@@ -127,7 +127,8 @@ const styles = {
     padding: "0.9rem 1.15rem",
     margin: "1.25rem 0 1.35rem",
     borderRadius: "0 8px 8px 0",
-    maxWidth: "min(100%, 42rem)",
+    maxWidth: "100%",
+    width: "100%",
   },
   pullQuoteText: {
     fontSize: "0.95rem",
@@ -204,22 +205,26 @@ const traits = [
   { label: "Under pressure", value: "Focused, not rattled. Clutch." },
 ];
 
-const outsideItems = [
+const expertiseCards = [
   {
-    title: "Sports",
-    body: "NBA, cricket, and football. Not casually, obsessively. Full context, strong opinions, genuine investment. I play everything competitively too — pickup soccer, padel, badminton. A game without stakes is just exercise.",
+    label: "ML End-to-End",
+    value:
+      "Raw data to deployed system. RecSys is the proof: 280M events, GCP, live FastAPI serving with automated retraining. Any problem, any domain. The method follows the problem.",
   },
   {
-    title: "Going all the way in",
-    body: "One Piece, a film I just watched, a podcast episode that caught my attention. I'm not satisfied until I have the full picture. Surface level has never been enough for me in anything I genuinely care about.",
+    label: "Forecasting and Time-Series",
+    value:
+      "My strongest production area. Regression ensembles, SARIMA, LSTM. 50% MAPE reduction at Calix, 76% to 95% at Sedin. Work I can defend deeply.",
   },
   {
-    title: "Sunshine person",
-    body: "I genuinely believe greeting people with a smile and making interactions warmer than they need to be matters. Not as a performance. Just as a baseline for how I want to move through the world.",
+    label: "Deep Learning, NLP and GenAI",
+    value:
+      "RAG pipelines, hallucination mitigation, hidden-state steering. Research-level depth with measurable results on real benchmarks.",
   },
   {
-    title: "Wired to be clutch",
-    body: "Tight deadline, high stakes, something that looks impossible on paper. That's when I'm most focused. It has helped me move mountains more than once.",
+    label: "Agentic AI",
+    value:
+      "Built SquadPlanner as a stateful multi-agent system in LangGraph. Understand the architecture, the tooling, the tradeoffs. Curious about inference engineering and the GPU side next.",
   },
 ];
 
@@ -406,47 +411,53 @@ function WhoIAm() {
                 <p style={styles.prose}>
                   End-to-end ML person. Not a specialist locked into one method or
                   domain, but someone who can take a problem from raw messy data to
-                  a deployed system a business actually depends on. Classical ML,
-                  deep learning, time-series, NLP, GenAI — the method follows the
-                  problem, not the other way around. What stays constant is the
-                  standard: models that hold up in production, not just in
-                  evaluation.
+                  a deployed system a business actually depends on.{" "}
+                  <strong>
+                    Classical ML, deep learning, time-series, NLP, GenAI
+                  </strong>
+                  . The method follows the problem, not the other way around. What
+                  stays constant is the standard: models that hold up in production,
+                  not just in evaluation.
                 </p>
               </StaggerChild>
 
               <StaggerChild delayIndex={2}>
                 <p style={styles.prose}>
-                  Where I have invested most of my recent project and coursework
-                  depth is the modern AI stack. Time-Aware RAG, hallucination
-                  steering at the hidden-state level, agentic systems with LangChain
-                  and Gemini. Not surface-level implementations. I have read the
-                  papers, understood the architecture, and built things that
-                  produced numbers worth talking about. Hit@1 from 40.4% to 59%,
-                  hallucination rate down 9.1 percentage points on GPT-Neo-2.7B.
+                  The clearest proof of that is <strong>RecSys</strong>. After Calix,
+                  I went back to my old GitHub and saw what I had built before: just
+                  notebooks, no deployment, no serving, no monitoring. So I built a
+                  recommendation system the right way.{" "}
+                  <strong>280M events processed on GCP</strong>, GRU4Rec trained to
+                  beat a published benchmark, FastAPI deployed on Cloud Run with
+                  automated concept-drift retraining on Vertex AI. That project exists
+                  because I wanted to know what end-to-end actually means in practice.
                 </p>
               </StaggerChild>
 
               <StaggerChild delayIndex={3}>
                 <p style={styles.prose}>
-                  The area I am most actively building toward is agentic AI.
-                  SquadPlanner gave me real experience designing multi-tool LangChain
-                  agents processing millions of Yelp records with live API
-                  integrations. I am currently extending my RAG work with a
-                  generation layer and studying agentic architectures seriously.
-                  This is where the most interesting applied problems are right now
-                  and where I want to be building.
+                  My deepest production expertise is <strong>forecasting</strong>. At
+                  Calix I redesigned a regression model into 13 week-specific models
+                  with algorithm-specific feature selection, hitting around{" "}
+                  <strong>50% MAPE reduction</strong> and shipping it to production
+                  under real warehouse constraints. At Sedin I took a loan disbursal
+                  model from <strong>76% to 95%</strong>. This is the area I can
+                  defend most deeply in any technical conversation.
                 </p>
               </StaggerChild>
 
               <StaggerChild delayIndex={4}>
                 <p style={styles.prose}>
-                  My most production-hardened work has been in forecasting. At Calix
-                  I built an ensemble combining regression, SARIMA and LSTM that
-                  shipped to production and hit 50% accuracy improvement over
-                  baseline. At Sedin I took a loan disbursal model from 76% to 95%.
-                  This is where I have done the most rigorous end-to-end work under
-                  real business constraints, and the area I can defend most deeply
-                  in any technical conversation.
+                  On the research side I have gone deep on <strong>modern AI</strong>.
+                  Time-Aware RAG with a custom re-ranker that hit{" "}
+                  <strong>59% Hit@1</strong> against a 40.4% baseline. Hallucination
+                  steering at the hidden-state level on GPT-Neo-2.7B, reducing
+                  hallucination rate by <strong>9.1 percentage points</strong>. I built
+                  SquadPlanner as a stateful multi-agent LangGraph system and learned a
+                  lot about <strong>agentic architectures</strong> from that. The next
+                  frontier I want to explore is{" "}
+                  <strong>inference engineering and the GPU side of ML</strong>. I am
+                  early in that journey and genuinely curious about where it leads.
                 </p>
               </StaggerChild>
 
@@ -459,28 +470,7 @@ function WhoIAm() {
                     marginBottom: "1.35rem",
                   }}
                 >
-                  {[
-                    {
-                      label: "ML End-to-End",
-                      value:
-                        "Raw data to deployed system. Any problem, any domain. Classical ML, ensembles, recommender systems, MLOps. The method follows the problem.",
-                    },
-                    {
-                      label: "Forecasting & Time-Series",
-                      value:
-                        "My strongest production area. SARIMA, LSTM, regression ensembles. 50% accuracy lift at Calix, 76% to 95% at Sedin. Work I can defend deeply.",
-                    },
-                    {
-                      label: "Deep Learning, NLP & GenAI",
-                      value:
-                        "RAG pipelines, hallucination mitigation, hidden-state steering. Research-level depth with measurable results on real benchmarks.",
-                    },
-                    {
-                      label: "Agentic AI",
-                      value:
-                        "Multi-tool LangChain agents, agentic architectures, MCP integrations. Actively building here. This is where I am heading.",
-                    },
-                  ].map((c) => (
+                  {expertiseCards.map((c) => (
                     <div
                       key={c.label}
                       style={{
@@ -534,27 +524,25 @@ function WhoIAm() {
 
           <StaggerChild delayIndex={2}>
             <p style={styles.prose}>
-              ML and data person at heart. Not because it's a hot field, though it
-              is, but because working with data is how I make sense of complex
-              problems. When I can see a problem through numbers, patterns and
-              structure, solving it becomes a competitive game to me. How do I get
-              better accuracy? Better data, better model, better tuning? Every
-              knob is something to explore and optimize. That mindset has followed
-              me from my first ML project to shipping production forecasting
-              systems at Calix that an entire analytics team depended on.
+              ML and data person at heart. Not because it is a hot field, but
+              because working with data is how I make sense of complex problems.
+              When I can see a problem through{" "}
+              <strong>numbers, patterns and structure</strong>, solving it becomes
+              a competitive game. How do I get better accuracy? Better data, better
+              model, better tuning? Every knob is something to explore and optimize.
             </p>
           </StaggerChild>
           <StaggerChild delayIndex={3}>
             <p style={styles.prose}>
-              When I get into something, I really get into it. Not surface level,
-              not good enough to get by. All the way in until I actually
-              understand it. At Calix I was handed a forecasting problem with a
-              clear path already laid out. I could have followed it. Instead I
-              went back to the business analysts, spent days talking to data
-              owners, read papers no one asked me to read, tested methods outside
-              the original brief, and delivered something well past what was
-              expected. Not because someone told me to. Because I physically
-              cannot approach a problem I care about any other way.
+              What has changed over time is{" "}
+              <strong>how I approach that game</strong>. I used to get ahead of
+              myself. On my <strong>churn project</strong> I started building models
+              before I had defined what churn even meant for that dataset, or what
+              metrics I was optimizing for. At <strong>Calix</strong> I kept jumping
+              to methods before I had a gameplan, without knowing when to stop and
+              switch tracks. On <strong>RecSys</strong> I built models without a
+              properly defined baseline to beat, which made the results meaningless
+              until I fixed that.
             </p>
           </StaggerChild>
 
@@ -564,34 +552,31 @@ function WhoIAm() {
               style={styles.pullQuote}
               className={`who-iam-pull-quote ${pq1Visible ? "who-iam-pull-quote-visible" : ""}`}
             >
-              <p style={styles.pullQuoteText}>
-                "Once something earns my genuine interest, I go all the way in.
-                The NBA, cricket, One Piece, a concept from an LLM paper I read in
-                class today. I'm studying the entire history, the context, the
-                details, until I actually feel like I know it."
+              <p className="who-iam-pull-quote-text" style={styles.pullQuoteText}>
+                "Define the problem. Define the metrics. Define the baseline. Then build."
               </p>
             </div>
           </StaggerChild>
 
           <StaggerChild delayIndex={5}>
             <p style={styles.prose}>
-              What drives me in ML specifically is the gap between "works in a
-              notebook" and "works when a business depends on it." At Calix I
-              learned what it means to optimize not just for accuracy but for
-              warehouse timeouts, pipeline costs, and real deployment constraints.
-              At Shell I learned that a technically elegant solution means nothing
-              if the business team cannot use it to make a decision. I care about
-              both sides of that equation, always.
+              Each of those experiences taught me the same lesson from a different
+              angle:{" "}
+              <strong>
+                define the problem, define the metrics, define the baseline
+              </strong>{" "}
+              before you touch the data. My approach now is meticulous and iterative.
+              Deep EDA, rigorous problem definition, exhaustive methods exploration
+              with a clear experimentation plan. I know when to switch tracks and I
+              do it with evidence, not frustration.
             </p>
           </StaggerChild>
           <StaggerChild delayIndex={6}>
             <p style={styles.prose}>
-              I'm also competitive by nature, but not in a zero-sum way. I don't
-              need to be the best person in the room. I just find that having
-              something at stake makes everything more interesting, whether that's
-              a pickup badminton game, a semester GPA, or a model accuracy
-              benchmark. It sharpens my focus and usually makes the people around
-              me more engaged too.
+              I am also <strong>competitive by nature</strong>, but not in a
+              zero-sum way. I just find that having something at stake makes
+              everything more interesting, whether that is a pickup football match,
+              a semester GPA, or a model accuracy benchmark.
             </p>
           </StaggerChild>
         </div>
@@ -647,11 +632,8 @@ function WhoIAm() {
               style={styles.pullQuote}
               className={`who-iam-pull-quote ${pq2Visible ? "who-iam-pull-quote-visible" : ""}`}
             >
-              <p style={styles.pullQuoteText}>
-                "Asking 'what decision will this drive?' instead of 'is this the
-                most elegant solution?' changed how I framed everything. Being
-                technically correct stopped being the goal. Being actually useful
-                became the goal."
+              <p className="who-iam-pull-quote-text" style={styles.pullQuoteText}>
+                "Asking 'what decision will this drive?' instead of 'is this the most elegant solution?' changed how I framed everything. Being technically correct stopped being the goal. Being actually useful became the goal."
               </p>
             </div>
           </StaggerChild>
@@ -752,16 +734,68 @@ function WhoIAm() {
             </div>
           </StaggerChild>
 
-          <div style={styles.outsideGrid}>
-            {outsideItems.map((item, i) => (
-              <StaggerChild key={item.title} delayIndex={i + 1}>
-                <div style={styles.outsideCard} className="who-iam-outside-card">
-                  <div style={styles.outsideCardTitle}>{item.title}</div>
-                  <p style={styles.outsideCardBody}>{item.body}</p>
-                </div>
-              </StaggerChild>
-            ))}
-          </div>
+          <StaggerChild delayIndex={1}>
+            <p style={styles.prose}>
+              <span className="who-iam-outside-lead who-iam-outside-lead--tamil">
+                தமிழன்
+              </span>
+              , proud Tamil from Chennai. Two things are non-negotiable: a good
+              masala dosa and filter coffee. If we ever meet, I am taking you to a
+              South Indian restaurant, no discussion.
+            </p>
+          </StaggerChild>
+
+          <StaggerChild delayIndex={2}>
+            <p style={styles.prose}>
+              <span className="who-iam-outside-lead">Sports are a religion.</span>{" "}
+              Lifelong Messi and Barcelona fan, still waiting for that UCL since
+              2015. The 2022 World Cup final is the best thing I have ever watched.
+              Bleed Yellow for CSK and Raina. Recently deep into the NBA, big
+              Giannis and Wemby fan. Started following F1, tennis and just got into
+              American football after watching the Wisconsin Badgers play. No NFL
+              team yet, genuinely open to suggestions.
+            </p>
+          </StaggerChild>
+
+          <StaggerChild delayIndex={3}>
+            <p style={styles.prose}>
+              <span className="who-iam-outside-lead">Outside the screen</span> I play
+              football every chance I get. Box-to-box midfielder, love to run, love
+              the chaos of a competitive match. Also a distance runner, you will find
+              me on Strava if you want to connect. Pickleball and badminton too,
+              though fair warning: I am annoyingly competitive at everything.
+            </p>
+          </StaggerChild>
+
+          <StaggerChild delayIndex={4}>
+            <p style={styles.prose}>
+              <span className="who-iam-outside-lead">Films and anime</span> the way
+              most people do not watch them. Huge Christopher Nolan fan, I can talk
+              about his filmography for hours. One Piece is the greatest story ever
+              told and I am current on both anime and manga. What I love is not just
+              watching but the post-analysis, the lore diving, the reading up on every
+              detail after. The world-building matters as much as the story.
+            </p>
+          </StaggerChild>
+
+          <StaggerChild delayIndex={5}>
+            <p style={styles.prose}>
+              <span className="who-iam-outside-lead">History</span> the same way.
+              Ancient Rome to the Ukraine war, I will read it all. In another life I
+              was definitely a historian or a geopolitics analyst. The patterns
+              across civilizations are endlessly fascinating, and honestly not that
+              different from how I think about data.
+            </p>
+          </StaggerChild>
+
+          <StaggerChild delayIndex={6}>
+            <p style={styles.prose}>
+              Travelled across India, the US, China, Thailand, Malaysia, Sri Lanka and
+              Turkey. Not a photos-and-leave traveller. I want to understand the
+              history, the geography, the culture of every place I visit. Currently
+              working through US national parks and cities one by one.
+            </p>
+          </StaggerChild>
         </div>
       </ScrollBlock>
         </section>

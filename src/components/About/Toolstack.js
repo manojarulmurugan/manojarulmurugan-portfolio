@@ -8,7 +8,6 @@ import {
   SiJupyter,
   SiGithub,
   SiGooglecloud,
-  SiGooglebigquery,
   SiMlflow,
   SiOpenai,
 } from "react-icons/si";
@@ -31,10 +30,6 @@ function Toolstack() {
       <Col xs={4} md={2} className="tech-icons tech-icon-gcs">
         <SiGooglecloud fontSize={"24px"} />
         <div className="tech-icons-text">GCS</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons tech-icon-bigquery-tools">
-        <SiGooglebigquery fontSize={"24px"} />
-        <div className="tech-icons-text">BigQuery</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons tech-icon-dataproc">
         <SiGooglecloud fontSize={"24px"} />
