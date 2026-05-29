@@ -29,10 +29,11 @@ function Projects() {
               imgPath={timeAwareRag}
               isBlog={false}
               title="Time-Aware RAG"
-              description="Built a temporal retrieval pipeline for 'as-of' question answering on year-anchored passages. Fine-tuned Facebook Contriever with triplet margin loss using T5-generated temporal hard negatives to reduce time-mismatched retrieval. Built an MRAG re-ranker using Sliding-Window MaxSim with temporal-decay fusion. Hit@1 improved from 40.4% to 59% on CAQA, with in-domain performance reaching 84.9%."
+              description="Built a temporal retrieval pipeline for 'as-of' question answering on year-anchored passages. Fine-tuned Facebook Contriever on 20k FineWeb-Edu passages (1800–2024) with triplet margin loss and T5-generated temporal hard negatives. Built an MRAG re-ranker using Sliding-Window MaxSim with temporal-decay fusion. Hit@1 improved from 40.4% → 59.1% and MRR@10 to 65.7% on ChroniclingAmericaQA; SQuAD Temporal Subset reached 78.5% Hit@1. Served via FastAPI + FAISS with Groq LLM for grounded answer generation."
               ghLink="https://github.com/manojarulmurugan/Time-Aware-Retrieval-Augmented-Generation"
+              demoLink="https://huggingface.co/spaces/manojarulmurugan/time-aware-rag"
               status="Research"
-              tags={["PyTorch", "HuggingFace", "Contriever", "RAG", "NLP"]}
+              tags={["PyTorch", "HuggingFace", "Contriever", "FAISS", "FastAPI", "RAG", "NLP"]}
             />
           </Col>
 
