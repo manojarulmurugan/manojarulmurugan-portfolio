@@ -54,7 +54,7 @@ function Projects() {
               imgPath={recosys}
               isBlog={false}
               title="E-Commerce Recommendation System"
-              description="Processed 280M clickstream events on GCP Dataproc using PySpark, then trained a session-based GRU4Rec model that beat the published T4Rec XLNet benchmark by 5.1% NDCG@20. Scaled to 1M users on Vertex AI A100, deployed FastAPI on Cloud Run with FAISS ANN search, MLflow tracking, and automated concept-drift monitoring. Live demo with a full e-commerce frontend."
+              description="Processed 280M REES46 clickstream events on BigQuery and Dataproc, then trained session-based GRU4Rec V9 on 1M users via Vertex AI — beating the published T4Rec XLNet benchmark by 5.1% NDCG@20. Deployed on Cloud Run with FAISS ANN search, MLflow tracking, distribution drift monitoring, and a weekly fine-tuning pipeline. Live Vercel demo with full e-commerce frontend and model performance dashboard."
               ghLink="https://github.com/manojarulmurugan/RecoSys"
               demoLink="https://recosys.vercel.app/"
               status="Production"
@@ -67,10 +67,10 @@ function Projects() {
               imgPath={salesForecastingChurn}
               isBlog={false}
               title="Customer Churn Prediction"
-              description="Predicted customer churn for a printing company on 370k sales records in a non-contractual setting where churn has no fixed definition. Engineered dynamic churn labels using ECDF-based purchase-gap thresholds per customer-product pair. Benchmarked ARIMA, LSTM, and ECDF approaches — all failed. XGBoost and RandomForest achieved 87% accuracy, outperforming every forecasting baseline."
-              ghLink="https://github.com/manojarulmurugan/Sales-Forecasting-and-Customer-Segmentation-on-Sales-Data"
-              status="Production"
-              tags={["XGBoost", "Scikit-learn", "Time-Series", "Python", "EDA"]}
+              description="Predicted customer churn from 370k printing-company sales transactions in a non-contractual setting with no explicit cancellation event. Benchmarked ARIMA, LSTM, and ECDF heuristics — all failed (~28–50% accuracy). XGBoost and Random Forest reached 87% accuracy with 0.89 precision. Extended with segmentation, CLV, and sales forecasting to prioritize high-value at-risk customers for retention."
+              ghLink="https://github.com/manojarulmurugan/Customer-Churn-Prediction-Sales-Data"
+              status="Research"
+              tags={["XGBoost", "Scikit-learn", "CLV", "Segmentation", "Python", "EDA"]}
             />
           </Col>
 
@@ -79,10 +79,11 @@ function Projects() {
               imgPath={creditRisk}
               isBlog={false}
               title="Credit Risk Analysis"
-              description="Built a stacked ensemble on 30k loan records to classify loans as good or bad and optimize lending profit. Handled class imbalance using SMOTE and Bootstrapping. Base learners across Logistic Regression, Random Forest, SVM, Naive Bayes and MLP were combined via XGBoost meta-learner, achieving 97.7% accuracy. Added a profit-risk layer using decile analysis to identify the lending threshold that maximizes revenue."
+              description="Investor portfolio selection on 2.26M LendingClub loans — ranking by predicted annualized net return instead of default probability alone. Built grade-blind PD, LGD, and ANR models with out-of-time validation across four vintages (2012–2015), beating LendingClub's grade ordering by 200–460 basis points. Deployed FastAPI scoring and Streamlit investor dashboard."
               ghLink="https://github.com/manojarulmurugan/Credit-Profit-Risk-Analysis"
-              status="Production"
-              tags={["XGBoost", "Scikit-Learn", "Python", "Ensemble ML"]}
+              demoLink="https://loan-alpha.streamlit.app/"
+              status="Live Demo"
+              tags={["XGBoost", "LightGBM", "FastAPI", "Streamlit", "LendingClub", "Portfolio ML"]}
             />
           </Col>
 
