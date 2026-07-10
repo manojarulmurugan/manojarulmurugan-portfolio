@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { ImBlog } from "react-icons/im";
 
 const STATUS_STYLES = {
   "Live Demo": { labelColor: "#34d399", dotColor: "#34d399", pulse: true },
@@ -74,6 +75,12 @@ function ProjectCards(props) {
             <Button variant="primary" href={props.demoLink} target="_blank">
               <CgWebsite /> &nbsp;
               {"Demo"}
+            </Button>
+          )}
+          {!props.isBlog && props.blogLink && (
+            <Button variant="primary" href={props.blogLink} target="_blank" rel="noreferrer">
+              <ImBlog /> &nbsp;
+              {"Write-up"}
             </Button>
           )}
         </div>

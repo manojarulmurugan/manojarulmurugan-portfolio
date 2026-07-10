@@ -32,6 +32,7 @@ function Projects() {
               description="Built a temporal retrieval pipeline for 'as-of' question answering on year-anchored passages. Fine-tuned Facebook Contriever on 20k FineWeb-Edu passages (1800–2024) with triplet margin loss and T5-generated temporal hard negatives. Built an MRAG re-ranker using Sliding-Window MaxSim with temporal-decay fusion. Hit@1 improved from 40.4% → 59.1% and MRR@10 to 65.7% on ChroniclingAmericaQA; SQuAD Temporal Subset reached 78.5% Hit@1. Served via FastAPI + FAISS with Groq LLM for grounded answer generation."
               ghLink="https://github.com/manojarulmurugan/Time-Aware-Retrieval-Augmented-Generation"
               demoLink="https://huggingface.co/spaces/manojarulmurugan/time-aware-rag"
+              blogLink="https://medium.com/@manojarulmurugan/the-retriever-doesnt-know-what-time-it-is-40645263c975"
               status="Research"
               tags={["PyTorch", "HuggingFace", "Contriever", "FAISS", "FastAPI", "RAG", "NLP"]}
             />

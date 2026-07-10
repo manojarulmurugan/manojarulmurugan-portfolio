@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { ImBlog } from "react-icons/im";
+import { BsGithub } from "react-icons/bs";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -106,6 +107,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/blog"
+                onClick={() => updateExpanded(false)}
+              >
+                <ImBlog style={{ marginBottom: "2px" }} /> Blog
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
@@ -119,7 +130,7 @@ function NavBar() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> GitHub
+                <BsGithub style={{ marginBottom: "2px" }} /> GitHub
               </Nav.Link>
             </Nav.Item>
           </Nav>
