@@ -59,7 +59,7 @@ function Projects() {
               imgPath={specdecQuant}
               isBlog={false}
               title="SpecDec-meets-Quant"
-              description="Ran a replicated 2³ factorial (397 vLLM serving runs, Llama-3.1-8B, A100) to test whether quantization (AWQ, FP8 KV-cache) and EAGLE-3 speculative decoding actually compound under continuous batching. They don't — stacked speedup trails the naive product by up to 2.97x, and every pairwise interaction is negative. FP8-KV turned out to be a capacity lever, not a speed lever: it doubles the admitted batch under KV pressure, cutting P95 latency 21% and lifting goodput 19%. Root-caused a real vLLM crash on long-context prompts to a stale checkpoint config via per-position GPU instrumentation and reported it upstream. Shipped a reusable, engine-agnostic benchmark harness with a full GPU-free test suite."
+              description="Ran a replicated 2³ factorial (397 vLLM serving runs, Llama-3.1-8B, A100) to test whether quantization (AWQ, FP8 KV-cache) and EAGLE-3 speculative decoding actually compound under continuous batching. They don't — stacked speedup trails the naive product by up to 2.97×, and every pairwise interaction is negative. FP8-KV proved a capacity lever, not a speed lever: doubling admitted batch under KV pressure, cutting P95 latency 21% and lifting goodput 19%. Shipped an engine-agnostic benchmark harness with a full GPU-free test suite."
               ghLink="https://github.com/manojarulmurugan/SpecDecoding-Study-vLLM-SGLang"
               status="Research"
               tags={["vLLM", "PyTorch", "Quantization", "Speculative Decoding", "LLM Inference", "GPU Systems"]}
@@ -121,7 +121,7 @@ function Projects() {
               imgPath={healthcareCopilot}
               isBlog={false}
               title="Healthcare Referral Copilot"
-              description="Built an evidence-grounded healthcare facility search app for India's fragmented facility data as a solo, 16-hour hackathon build (Databricks x Hack-Nation Data Legend challenge). A 5-stage deterministic pipeline turns 451k noisy claims across 10,077 real facilities into scored, capability-level evidence -- after an LLM-based extraction approach failed at scale, it was replaced with a 100%-coverage rule-based mapper instead. The LLM is used only for query parsing and optional external corroboration, never as a source of facts: every claim traces to row-level source text, and corroboration quotes are rejected unless verbatim. Full-stack: evidence + geography ranking, Postgres persistence via Databricks Lakebase, deployed live on Databricks Apps, 111 passing tests."
+              description="Solo 16-hour hackathon build (Databricks × Hack-Nation) for evidence-grounded healthcare facility search over India's fragmented facility data. A 5-stage deterministic pipeline turns 451k noisy claims across 10,077 facilities into scored, capability-level evidence — swapping a failed LLM extractor for a 100%-coverage rule-based mapper. LLM used only for query parsing and optional corroboration; every claim traces to row-level source text. Deployed on Databricks Apps with Postgres via Lakebase; 111 passing tests."
               ghLink="https://github.com/manojarulmurugan/hacknation-referral-copilot"
               demoLink="https://data-legend-app-7474656737321234.aws.databricksapps.com"
               status="Live Demo"
